@@ -1,5 +1,5 @@
 from django.db import models
-from src.core.models import BaseModel
+from src.core.models.base_model import BaseModel
 
 
 class Role(BaseModel):

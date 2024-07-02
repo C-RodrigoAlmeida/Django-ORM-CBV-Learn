@@ -6,7 +6,7 @@ from src.user.models.role import Role
 class RegisterForm(forms.ModelForm):
     class Meta:
         model = CustomUser
-        fields = ["name", "email", "password", "role"]
+        fields = ["username", "email", "password", "role"]
 
     role = forms.ModelChoiceField(queryset=Role.objects.all(), required=True)
 

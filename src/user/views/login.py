@@ -1,11 +1,11 @@
-from src.user.forms.login import loginForm
+from src.user.forms.login import LoginForm
 from django.views.generic import TemplateView
 from django.contrib.auth import authenticate, login
 
 
-class loginView(TemplateView):
+class Login(TemplateView):
     template_name = "login.html"
-    form_class = loginForm
+    form_class = LoginForm
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
