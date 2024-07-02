@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "src.user",
     "src.schools",
+    "src.home",
 ]
 
 MIDDLEWARE = [
@@ -57,8 +58,6 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            BASE_DIR / "src" / "user" / "templates",
-            BASE_DIR / "src" / "schools" / "templates",
             BASE_DIR / "src" / "core" / "templates",
         ],
         "APP_DIRS": True,
