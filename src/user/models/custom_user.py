@@ -1,11 +1,12 @@
 from django.db import models
+from src.user.models.role import Role
 from src.core.models.base_model import BaseModel
 from django.contrib.auth.models import AbstractUser, Group, Permission
 
 
 # Create your models here.
 class CustomUser(BaseModel, AbstractUser):
-    role = models.ForeignKey("Role", on_delete=models.CASCADE, null=True, blank=True)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True)
 
     groups = models.ManyToManyField(
         Group,
