@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractUser, Group, Permission
 
 # Create your models here.
 class CustomUser(BaseModel, AbstractUser):
-    role = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True)
+    role = models.ForeignKey(Role, on_delete=models.CASCADE, blank=True, null=True)
 
     groups = models.ManyToManyField(
         Group,
@@ -27,4 +27,4 @@ class CustomUser(BaseModel, AbstractUser):
     )
 
     def __str__(self):
-        return self.name
+        return f'Name: {self.first_name} - Username: {self.username}'
