@@ -3,7 +3,7 @@ from src.core.models.base_model import BaseModel
 
 
 # Create your models here.
-class Schools(BaseModel):
+class School(BaseModel):
     name = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
 

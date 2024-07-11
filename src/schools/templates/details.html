@@ -7,5 +7,10 @@
     <p>name: {{ school_detail.name }}</p>
     <p>principal: {{ school_detail.principal }}</p>
     <p>address: {{ school_detail.address }}</p>
+
+    <h3> Students: </h3>
+    {% for student in school_detail.students.all%}
+        <p> {{ student.name }} who is {{ student.age }} years old </p>
+    {% endfor %}
 </div>
 {% endblock %}

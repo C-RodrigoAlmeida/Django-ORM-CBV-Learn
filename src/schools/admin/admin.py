@@ -1,5 +1,5 @@
 # Register your models here.
 from django.contrib import admin
-from src.schools.models.schools import Schools
+from src.schools.models.school import School
 
-admin.site.register(Schools)
+admin.site.register(School)
